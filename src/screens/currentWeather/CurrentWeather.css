@@ -1,0 +1,49 @@
+
+.weatherCard{
+    width: 300px;
+    border-radius: 6px;
+    box-shadow: 10px -2px 20px 2px rgb(0 0 0 /30%);
+    color: #fff;
+    background-color: #333333;
+    margin: 20px auto;
+    padding: 20px;
+}
+.top,
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.city{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0;
+    letter-spacing: 2px;
+}
+.description{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+.temperature{
+    font-weight: 500;
+    font-size: 60px;
+    width: auto;
+    margin: 10px 0;
+}
+.details{
+    width: 100%;
+    margin: 20px 0 20px 20px;
+    font-size: 14px;
+}
+.parameter-row{
+    display: flex;
+    justify-content: space-between;
+}
+.parameter-value{
+    font-weight: 600;
+    font-size: 15px;
+}
