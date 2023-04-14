@@ -7,9 +7,19 @@ const Search = ({ onSearchChange }) => {
     const [search, setSearch] = useState(null);
 
     const loadOptions = (inputValue) => {
-        fetch(`${GEO_API_URL}/cities?minPopulation=1000000&namePrefix=${inputValue}`, GeoApiOptions)
+        return fetch(
+            `${GEO_API_URL}/cities?minPopulation=1000000&namePrefix=${inputValue}`, GeoApiOptions)
             .then(response => response.json())
-            .then(response => console.log(response))
+            .then(response => {
+                return {
+                    options: response.data.map((city) => {
+                        return {
+                            value: `${city.latitude} ${city.longitude}`,
+                            label: `${city.name}, ${city.countryCode}`,
+                        }
+                    })
+                }
+            })
             .catch(err => console.error(err));
     }
 
