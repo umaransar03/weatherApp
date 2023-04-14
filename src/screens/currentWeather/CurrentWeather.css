@@ -47,3 +47,18 @@
     font-weight: 600;
     font-size: 15px;
 }
+@media screen and (max-width: 600px) {
+    .weatherCard{
+        width: 200px;
+    }
+    .weatherIcon{
+        width: 70px;
+    }
+    .bottom{
+        display: flex;
+        flex-direction: column;
+    }
+    .details{
+        margin: 10px;
+    }
+}
